@@ -4,7 +4,7 @@ A small Python wrapper for `whois.cymru.com`.
 
 ## Usage
 
-```
+```python
 from teamcymru import IPToASN
 
 i2a = IPToASN([..list of ips..])
@@ -31,12 +31,35 @@ You can install python-teamcymru after cloning this repository with:
 make setup
 ```
 
-## Running tests
+## Pre-reqs (optional)
 
-Install the dev-dependencies with `pip install -r dev-requirements.txt`
+* Docker (latest)
+* Docker Compose (latest)
 
-Run
+
+## Testing the project
+
+To build for the first time;
+
+```
+make build
+```
+
+To run a specific test:
+
+```
+make shell
+pytest tests -k  you_special_test
+```
+
+To run the full test suite:
 
 ```
 make test
+```
+
+To clean your environment:
+
+```
+make clean
 ```
